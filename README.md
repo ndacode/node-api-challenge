@@ -39,14 +39,26 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
 - [ ] Mention two parts of Express that you learned about this week.
-      We learned about the fact that Express requires a json translation in order to be able to send and receive requests and responses from the server.
+      We learned about the fact that Express requires a json translation in order to be able to send and receive requests and responses from the server. We also learned that Express allows us to create a routing system that lets is shorten and consolidate our calls to the resource.
 - [ ] Describe Middleware?
+      Middleware functions are functions that have access to the request object (req), the response object (res), and the next function in the application’s request-response cycle. The next function is a function in the Express router which, when invoked, executes the middleware succeeding the current middleware.
+      Middleware functions can perform the following tasks:
+
+Execute any code.
+Make changes to the request and the response objects.
+End the request-response cycle.
+Call the next middleware in the stack.
 
 - [ ] Describe a Resource?
-
+      In the context of REpresentational State Transfer, A resource is a piece of or collection of data that can be accessed via the server and can be representationally modified from its initial state.
+      Each resource is accessible via a unique URI.
+      Resources can have multiple representations.
+      Communication happens over a stateless protocol (HTTP).
+      Resource management happens via HTTP methods.
 - [ ] What can the API return to help clients know if a request was successful?
-
+      The API can return HTTP codes to let a client know if a request was successful.
 - [ ] How can we partition our application into sub-applications?
+      Express Routers are a way to split an application into sub-applications to make it more modular and easier to maintain and reason about. We do this by assigning routers to specific endpoints and maintaing the http calls in files related to those enpoints alone.
 
 ## Minimum Viable Product
 
